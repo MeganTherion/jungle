@@ -1,2 +1,23 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin::Dashboard</h1><br><br>
+
+<div class="container">
+  <div class="row">
+  <div class="four col-md-3">
+		<div class="counter-box">
+			<i class="fa  fa-shopping-cart"></i>
+			<span class="counter"><%= @product_count %></span>
+      <%= link_to 'Available Products', [:admin, :products], class: "nav-link" %>
+		</div>
+	</div>
+  <div class="four col-md-3">
+		<div class="counter-box">
+			<i class="fa  fa-user"></i>
+			<span class="counter"> <%= @category_count %></span>
+      <%= link_to 'Categories', @categories %>
+		</div>
+	</div>
+  </div>	
+</div>
+<br><br>
+ 
+<%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
