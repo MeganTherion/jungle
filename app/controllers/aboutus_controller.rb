@@ -1,7 +1,5 @@
 class AboutusController < ApplicationController
-  def hello
+  def index
   end
 
-  def goodbye
-  end
 end
