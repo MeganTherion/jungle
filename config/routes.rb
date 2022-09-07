@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'aboutus/hello'
+  get 'aboutus/goodbye'
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
