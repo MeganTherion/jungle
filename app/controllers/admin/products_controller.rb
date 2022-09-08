@@ -14,7 +14,7 @@ class Admin::ProductsController < ApplicationController
     
       redirect_to [:admin, :products], notice: 'Product created!'
   
-    end
+    
   end
 
   def destroy

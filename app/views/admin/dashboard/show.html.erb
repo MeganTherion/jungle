@@ -7,6 +7,7 @@
 			<i class="fa  fa-shopping-cart"></i>
 			<span class="counter"><%= @product_count %></span>
       <%= link_to 'Available Products', [:admin, :products], class: "nav-link" %>
+			<%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
 		</div>
 	</div>
   <div class="four col-md-3">
@@ -14,11 +15,11 @@
 			<i class="fa  fa-user"></i>
 			<span class="counter"> <%= @category_count %></span>
       <%= link_to 'Categories', [:admin, :categories], class: "nav-link" %>
+			<%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
 		</div>
 	</div>
   </div>	
 </div>
 <br><br>
  
-<%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
-<%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+
