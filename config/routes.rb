@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get 'categories/index'
-    get 'categories/new'
-    get 'categories/create'
+    resources :categories
+    
   end
   get 'aboutus/index'
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
-  resources :categories, only: [:show]
+  resources :categories, only: [:index, :show]
 
   resource :cart, only: [:show] do
     post   :add_item
