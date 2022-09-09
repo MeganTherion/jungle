@@ -15,7 +15,7 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 
 ## Database
 
-If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
+If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user. 
 
 ## Stripe Testing
 
