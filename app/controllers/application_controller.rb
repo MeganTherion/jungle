@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  #helper method allows us to use @current_user in view fileds
   helper_method :current_user
 
+  #sends user to login page if they're not loggedin
   def authorize
     redirect_to '/login' unless current_user
   end
@@ -38,5 +40,5 @@ class ApplicationController < ActionController::Base
     }
     cookies[:cart]
   end
-  
+
 end
