@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   namespace :admin do
     resources :categories
     
