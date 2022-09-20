@@ -49,6 +49,16 @@ RSpec.describe User, type: :model do
       expect(user2).to_not (be_valid) #not sure what the bug is here
     end
 
+    it 'ignores whitespace in email' do
+      user = User.create(
+        name: "Billy",
+        email: " billy@pelican.com ",
+        password: "password",
+        password_confirmation: "password"
+      )
+      expect(user).to (be_valid)
+    end
+
     it 'ensures required fields are present' do
       user = User.create(
         name: nil,
